@@ -1,0 +1,150 @@
+
+body {
+    background: linear-gradient(135deg, #069c9c, #f5faf9, #0a9e8b); /* Tons do Sicoob */
+    margin: 0;
+    padding: 0;
+     font-family: "Trebuchet MS", sans-serif; background: linear-gradient(135deg, #089e85, #e6eeec, #005B4F); /* Tons do Sicoob */ color: #0d0101; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; /* Centraliza todo o conteúdo */ justify-content: center; text-align: center; height: 100vh; }
+
+/* Caixa estilizada para destacar conteúdo (Fundo Branco) */
+.container {
+    max-width: 900px;
+    width: 90%;
+    padding: 25px;
+    background: #ffffff; /* Fundo Branco */
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilização dos títulos */
+h1 {
+    background: linear-gradient(90deg, #005B4F, #00A886);
+    color: #ffffff; /* Títulos Brancos */
+    padding: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #00A886; /* Subtítulos Verdes */
+    font-size: 28px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Botão "Saiba mais" estilizado */
+.saiba-mais {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 15px 25px;
+    border: 3px solid #00A886;
+    background: linear-gradient(135deg, #007D69, #005B4F);
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 168, 134, 0.4);
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.saiba-mais:hover {
+    background: #00A886;
+    color: #005B4F;
+    box-shadow: 0px 8px 16px rgba(0, 125, 105, 0.6);
+    transform: scale(1.05);
+}
+
+/* Estilização do logo Sicoob */
+.logo-sicoob {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-sicoob:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* Estilização do menu de acessibilidade */
+.accessibility-menu {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+/* Botão de acessibilidade */
+#accessibility-btn {
+    background: linear-gradient(135deg, #007D69, #005B4F);
+    color: white;
+    font-size: 16px;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 6px 10px rgba(0, 168, 134, 0.4);
+}
+
+#accessibility-btn:hover {
+    background: #00A886;
+    color: #005B4F;
+    box-shadow: 0px 8px 14px rgba(0, 125, 105, 0.5);
+    transform: scale(1.1);
+}
+
+/* Menu de acessibilidade */
+#accessibility-options {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    border: 3px solid #007D69;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Botões dentro do menu de acessibilidade */
+#accessibility-options button {
+    background: linear-gradient(135deg, #007D69, #005B4F);
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+#accessibility-options button:hover {
+    background: #00A886;
+    color: #005B4F;
+    box-shadow: 0px 5px 10px rgba(0, 125, 105, 0.5);
+    transform: scale(1.05);
+}
+
+/* Classes para animação */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
