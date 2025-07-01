@@ -1,49 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>ExpoIngá</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExpoIngá - Estande Sicoob</title>
+
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Fonte OpenDyslexic -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.0/open-dyslexic.min.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Botão de Acessibilidade (fora da centralização) -->
-    <div class="accessibility-menu">
-        <button id="accessibility-btn">Acessibilidade</button>
-        <div id="accessibility-options" class="hidden">
-            <button id="increase-font">A+</button>
-            <button id="decrease-font">A-</button>
-            <button id="contrast-toggle">Alto Contraste</button>
-            <button id="colorblind-mode">Para Daltônicos</button>
-            <button id="dyslexia-mode">Modo Disléxico</button>
-        </div>
+  <!-- Menu de Acessibilidade no topo -->
+  <div class="accessibility-menu">
+    <div class="accessibility-title">Acessibilidade</div>
+    <div id="accessibility-options">
+      <button id="increase-font"><i class="fas fa-search-plus"></i> Aumentar</button>
+      <button id="decrease-font"><i class="fas fa-search-minus"></i> Diminuir</button>
+      <button id="reset-font"><i class="fas fa-sync-alt"></i> Fonte Padrão</button>
+      <button id="toggle-dyslexia"><i class="fas fa-eye"></i> Fonte Disléxica</button>
     </div>
+  </div>
 
-    <!-- Conteúdo centralizado -->
+  <!-- Botão de Tema -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Alternar Tema">
+    <i class="fas fa-sun"></i>
+  </button>
+
+  <div class="main-wrapper">
+    <!-- Conteúdo principal -->
     <div class="container">
-        <h1>ExpoIngá-Estandes</h1>
-        <h1>Estande Sicoob</h1>
-        <h2>Aluna: Natalia Soares</h2>
+      <h1>ExpoIngá - Estandes</h1>
+      <h1>Estande Sicoob</h1>
 
-        <h2>Objetivo:</h2>
-        <p>O estande tem o objetivo principal de nos auxiliar como mexer com o dinheiro do banco e contas no geral de forma facilitada.</p>
+      <h2>Objetivo:</h2>
+      <p>O estande tem o objetivo principal de nos auxiliar como mexer com o dinheiro do banco e contas no geral de forma facilitada, trazendo assim uma experiencia mais divertida e legal de aprender a mexer com o dinheiro.</p>
 
-        <h2>Diferencial:</h2>
-        <p>O diferencial claramente é a forma mais rápida e fácil, além de intuitiva de como utilizar o dinheiro com a ajuda de um jogo de tabuleiro.</p>
+      <h2>Diferencial:</h2>
+      <p>A proposta se destaca pela forma rápida, fácil e intuitiva de ensinar sobre finanças usando um jogo de tabuleiro, o que eu achei muito interessante.</p>
 
-        <h2>Curiosidades:</h2>
-        <p>Embora não haja informações específicas sobre a participação do Sicoob na Expoingá 2025, o Sicoob tem se destacado em eventos do setor agropecuário, como a Expointer 2023. Na ocasião, o Sicoob recebeu 1.126 propostas de negócios, totalizando R$ 222,9 milhões em financiamentos, um aumento de 346% em relação ao ano anterior. Isso demonstra o compromisso do Sicoob com o desenvolvimento do agronegócio e a inovação no setor.</p>
+      <h2>Curiosidades:</h2>
+      <p>Embora não haja informações específicas sobre a participação do Sicoob na Expoingá 2025, a instituição vem marcando presença em eventos agro, como a Expointer 2023, onde recebeu mais de mil propostas, somando R$ 222,9 milhões em financiamentos.</p>
 
-        <div class="header-container">
-            <h2 class="saiba-mais">Saiba mais:</h2>
-            <header>
-                <a href="https://www.sicoob.com.br" target="_blank">
-                    <img src="sicoob-logo-0 (1).png" alt="Sicoob" class="logo-sicoob">
-                </a>
-            </header>
-        </div>
+      <div class="header-container">
+        <h2>Saiba mais clicando nesta logo aqui:</h2>
+        <a href="https://www.sicoob.com.br" target="_blank">
+          <img src="sicoob-logo-0 (1).png" alt="Sicoob" class="logo-sicoob" />
+        </a>
+      </div>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <footer class="site-footer">
+    Desenvolvido por <strong>Natalia Soares</strong> — ExpoIngá Estandes
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>

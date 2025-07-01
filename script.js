@@ -1,48 +1,36 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const accessibilityBtn = document.getElementById("accessibility-btn");
-    const accessibilityOptions = document.getElementById("accessibility-options");
+// Botões de Acessibilidade
+const increaseFont = document.getElementById('increase-font');
+const decreaseFont = document.getElementById('decrease-font');
+const resetFont = document.getElementById('reset-font');
+const toggleDyslexia = document.getElementById('toggle-dyslexia');
+const themeToggle = document.getElementById('theme-toggle');
 
-    // Função para mostrar o menu de acessibilidade
-    function showMenu() {
-        accessibilityOptions.classList.remove("hidden");
-        setTimeout(() => accessibilityOptions.classList.add("show"), 10);
-    }
+// Controle de fonte
+let fontSize = 100;
 
-    // Função para esconder o menu de acessibilidade
-    function hideMenu() {
-        accessibilityOptions.classList.remove("show");
-        setTimeout(() => accessibilityOptions.classList.add("hidden"), 300);
-    }
+increaseFont.addEventListener('click', () => {
+  fontSize += 10;
+  document.body.style.fontSize = fontSize + '%';
+});
 
-    // Exibir menu ao clicar ou passar o mouse
-    accessibilityBtn.addEventListener("mouseover", showMenu);
-    accessibilityBtn.addEventListener("click", showMenu);
+decreaseFont.addEventListener('click', () => {
+  fontSize = Math.max(50, fontSize - 10);
+  document.body.style.fontSize = fontSize + '%';
+});
 
-    // Esconder menu ao retirar o mouse
-    accessibilityOptions.addEventListener("mouseleave", hideMenu);
+resetFont.addEventListener('click', () => {
+  fontSize = 100;
+  document.body.style.fontSize = '100%';
+});
 
-    // Função para aumentar a fonte
-    document.getElementById("increase-font").addEventListener("click", function () {
-        document.body.style.fontSize = "larger";
-    });
+// Fonte para dislexia
+toggleDyslexia.addEventListener('click', () => {
+  document.body.classList.toggle('dyslexia-font');
+});
 
-    // Função para diminuir a fonte
-    document.getElementById("decrease-font").addEventListener("click", function () {
-        document.body.style.fontSize = "smaller";
-    });
-
-    // Alternar alto contraste
-    document.getElementById("contrast-toggle").addEventListener("click", function () {
-        document.body.classList.toggle("high-contrast");
-    });
-
-    // Alternar modo para daltônicos
-    document.getElementById("colorblind-mode").addEventListener("click", function () {
-        document.body.classList.toggle("colorblind-mode");
-    });
-
-    // Alternar modo disléxico
-    document.getElementById("dyslexia-mode").addEventListener("click", function () {
-        document.body.classList.toggle("dyslexia-mode");
-    });
+// Tema claro/escuro via botão do sol/lua
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+  themeToggle.querySelector('i').classList.toggle('fa-sun');
+  themeToggle.querySelector('i').classList.toggle('fa-moon');
 });
